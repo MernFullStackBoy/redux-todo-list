@@ -2,6 +2,7 @@ import React from 'react'
 import TodoForm from './components/TodoForm/TodoForm'
 import TodoCart from './components/TodoCart/TodoCart'
 import { useSelector } from 'react-redux'
+import Loader from './components/Loader/Loader'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <div className=' max-w-[450px] p-[20px] w-[100%] h-auto shadow mx-auto mt-[20px] rounded-[20px] '>
       <TodoForm />
       <br />
+      <Loader />
       {todos?.map(todo => (
         <TodoCart key={todo.id} {...todo} />
       ))}
